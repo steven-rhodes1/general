@@ -1,3 +1,9 @@
+# Show Time on prompt
+PROMPT='%{$fg_bold[magenta]%} %w %T % %{$reset_color%} ${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)'
+
+# Set access to my repos
+alias gitsr="GIT_SSH_COMMAND=\"ssh -i /projects/steven-rhodes1/id_rsa\" $@"
+
 listening() {
     if [ $# -eq 0 ]; then
         sudo lsof -iTCP -sTCP:LISTEN -n -P
